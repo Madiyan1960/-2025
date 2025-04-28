@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Приглашение на День Рождения Алуа</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://i.pinimg.com/originals/c0/4c/56/c04c5678b41276f3ff1047d8e9eb5304.gif') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #fff;
+      text-align: center;
+    }
+
+    .container {
+      background: rgba(0, 0, 0, 0.5);
+      margin: 40px auto;
+      padding: 20px;
+      border-radius: 20px;
+      max-width: 400px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      color: #ffd700;
+      text-shadow: 1px 1px 5px #fff;
+    }
+
+    .fairy {
+      font-size: 24px;
+      color: #ffccff;
+    }
+
+    .info {
+      font-size: 18px;
+      margin-top: 15px;
+      line-height: 1.6;
+    }
+
+    .rsvp-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      color: white;
+      background-color: #ff69b4;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .rsvp-button:hover {
+      background-color: #e055a1;
+    }
+
+    .photo {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      margin-top: 20px;
+      border: 5px solid #ffd700;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎉 Приглашение! 🎉</h1>
+    <p class="fairy">Добро пожаловать в волшебный мир фей ✨</p>
+    <div class="info">
+      <p>Милая Алуа приглашает тебя</p>
+      <p>на свой <strong>6-й День Рождения!</strong></p>
+      <p>📅 <strong>23 апреля 2025 года</strong></p>
+      <p> Адрес: Астана, ул. Айнакол, 66</p>
+      <p> Время: 16.00</p>
+      <p>📍 Место: <a href="https://2gis.kz/astana/geo/70000001090408085" target="_blank">Посмотреть на карте</a></p>
+      <p>Будет весело, сказочно и волшебно!</p>
+    </div>
+
+    <!-- Фото Алуа -->
+    <img src="https://s.iimg.su/s/18/th_GyQ15zARPH6k7v9TjxEfRss1hOld7S9N7QeEZ3UQ.jpg?6703" alt="Алуа" class="photo">
+
+    <p>
+      <a class="rsvp-button" href="javascript:void(0);" onclick="openRSVPForm()">
+        ✅ Я приду!
+      </a>
+    </p>
+  </div>
+
+  <script>
+    function openRSVPForm() {
+      // Здесь добавьте ссылку на вашу Google форму для подтверждения участия
+      var formURL = "https://forms.gle/uyf1GSCWvnUBpF1h9";
+      window.open(formURL, "_blank");
+    }
+  </script>
+
+</body>
+</html>
