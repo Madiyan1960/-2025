@@ -1,6 +1,59 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вход</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    .login-box {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      width: 300px;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px;
+      width: 100%;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .hidden-content {
+      display: none;
+      text-align: left;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <h2>Введите пароль</h2>
+    <input type="password" id="password" placeholder="Пароль" />
+    <button onclick="checkPassword()">Войти</button>
+    <div id="error" style="color: red; margin-top: 10px;"></div>
+    <div class="hidden-content" id="content">
+      <h3>Добро пожаловать!</h3>
+      <p>Теперь вы видите содержимое сайта.</p>
+      <<!DOCTYPE html>
+<html lang="ru">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -23,4 +76,25 @@
 </div>
 
 </body>
+</html>>
+    </div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const pass = document.getElementById("password").value;
+      const correct = "1234"; // ← здесь задай свой пароль
+
+      if (pass === correct) {
+        document.getElementById("content").style.display = "block";
+        document.getElementById("error").innerText = "";
+      } else {
+        document.getElementById("error").innerText = "Неверный пароль!";
+        document.getElementById("content").style.display = "none";
+      }
+    }
+  </script>
+</body>
 </html>
+
+
