@@ -14,7 +14,7 @@
       justify-content: center;
       margin: 0;
     }
-    .login-box {
+    .container {
       background: white;
       padding: 30px;
       border-radius: 10px;
@@ -33,60 +33,23 @@
       border: none;
       cursor: pointer;
     }
-    .hidden-content {
-      display: none;
-      text-align: left;
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body>
-  <div class="login-box" id="login-box">
+  <div class="container">
     <h2>Введите пароль</h2>
     <input type="password" id="password" placeholder="Пароль" />
     <button onclick="checkPassword()">Войти</button>
-    <div id="error" style="color: red; margin-top: 10px;"></div>
+    <div id="error" style="color: red;"></div>
   </div>
 
-  <div class="hidden-content" id="content">
-    <h2>Добро пожаловать!</h2>
-    <p>Теперь вы видите содержимое сайта.</p>
-      <<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Главная страница</title>
-</head>
-<body style="font-family: Arial, sans-serif; margin: 0; padding: 0;">
-
-<nav style="background-color: #333; padding: 10px;">
-  <a href="index.html" style="color: white; margin-right: 15px; text-decoration: none;">Главная</a>
-  <a href="about.html" style="color: white; margin-right: 15px; text-decoration: none;">О нас</a>
-   <a href="alua.html" style="color: white; margin-right: 15px; text-decoration: none;">Приглашение</a>
-  <a href="status.html" style="color: white; margin-right: 15px; text-decoration: none;">Цитаты</a>
-  <a href="contact.html" style="color: white; text-decoration: none;">Контакты</a>
-  
-</nav>
-
-<div style="padding: 20px;">
-  <h1>Добро пожаловать на наш сайт!</h1>
-  <p>Это главная страница. Здесь будет основная информация.</p>
-</div>
-
-</body>
-</html>>
-    </div>
- 
   <script>
     function checkPassword() {
-      const pass = document.getElementById("password").value;
-      const correct = "1234"; // ← тут свой пароль
+      const entered = document.getElementById("password").value;
+      const correct = "1234"; // ← твой пароль
 
-      if (pass === correct) {
-        document.getElementById("login-box").style.display = "none"; // скрыть форму
-        document.getElementById("content").style.display = "block"; // показать содержимое
+      if (entered === correct) {
+        window.location.href = "home.html"; // ← переход на другую страницу
       } else {
         document.getElementById("error").innerText = "Неверный пароль!";
       }
@@ -94,5 +57,3 @@
   </script>
 </body>
 </html>
-
-
