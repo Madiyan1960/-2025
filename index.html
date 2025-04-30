@@ -22,14 +22,12 @@
       width: 300px;
       text-align: center;
     }
-    input {
+    input, button {
       width: 100%;
       padding: 10px;
       margin: 10px 0;
     }
     button {
-      padding: 10px;
-      width: 100%;
       background: #4CAF50;
       color: white;
       border: none;
@@ -43,14 +41,16 @@
   </style>
 </head>
 <body>
-  <div class="login-box">
+  <div class="login-box" id="login-box">
     <h2>Введите пароль</h2>
     <input type="password" id="password" placeholder="Пароль" />
     <button onclick="checkPassword()">Войти</button>
     <div id="error" style="color: red; margin-top: 10px;"></div>
-    <div class="hidden-content" id="content">
-      <h3>Добро пожаловать!</h3>
-      <p>Теперь вы видите содержимое сайта.</p>
+  </div>
+
+  <div class="hidden-content" id="content">
+    <h2>Добро пожаловать!</h2>
+    <p>Теперь вы видите содержимое сайта.</p>
       <<!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -82,14 +82,13 @@
   <script>
     function checkPassword() {
       const pass = document.getElementById("password").value;
-      const correct = "1234"; // ← здесь задай свой пароль
+      const correct = "1234"; // ← тут свой пароль
 
       if (pass === correct) {
-        document.getElementById("content").style.display = "block";
-        document.getElementById("error").innerText = "";
+        document.getElementById("login-box").style.display = "none"; // скрыть форму
+        document.getElementById("content").style.display = "block"; // показать содержимое
       } else {
         document.getElementById("error").innerText = "Неверный пароль!";
-        document.getElementById("content").style.display = "none";
       }
     }
   </script>
